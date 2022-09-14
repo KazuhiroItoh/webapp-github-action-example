@@ -17,5 +17,6 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build
-          build-root-directory: helloworld
+          gradle-version: current
+      - run: gradle build --dry-run    
+
