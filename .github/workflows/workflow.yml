@@ -25,9 +25,9 @@ jobs:
       
       - run: pwd
       - run: ls -la
-      
+      - run: ls -la /home/runner/work/webapp-github-action-example/webapp-github-action-example/build/libs
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
           name: helloworld.war
-          path: build/libs/helloworld.war
+          path: /home/runner/work/webapp-github-action-example/webapp-github-action-example/build/libs/helloworld.war
