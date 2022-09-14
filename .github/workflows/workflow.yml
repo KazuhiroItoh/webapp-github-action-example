@@ -15,7 +15,7 @@ jobs:
           java-version: 11        
 
       - run: pwd
-      - run: ls -la
+      - run: ls -R
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
@@ -24,10 +24,10 @@ jobs:
       - run: gradle build
       
       - run: pwd
-      - run: ls -la
-      - run: ls -la /home/runner/work/webapp-github-action-example/webapp-github-action-example/build/libs
+      - run: ls -R
+
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: helloworld.war
-          path: /home/runner/work/webapp-github-action-example/webapp-github-action-example/build/libs/helloworld.war
+          name: webapp-github-action-example.war
+          path: build/libs/webapp-github-action-example.war
