@@ -1,0 +1,12 @@
+plugins {
+    id "war"
+    id "eclipse"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax:javaee-web-api:6.0'
+}
